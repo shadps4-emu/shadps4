@@ -16,6 +16,19 @@ if(EXISTS ${PROJECT_SOURCE_DIR}/hooks/pre-commit AND NOT EXISTS ${PROJECT_SOURCE
     endif()
 endif()
 
+# Configure C++ standard
+# ===========================
+
+if (MSVC)
+    add_compile_options($<$<COMPILE_LANGUAGE:CXX>:/std:c++20>)
+else()
+    set(CMAKE_CXX_STANDARD 20)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
+endif()
+
+# Output binaries to bin/
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+
 aux_source_directory(src/ sources)
 
 include_directories(src/)
