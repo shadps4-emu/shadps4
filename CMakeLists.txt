@@ -99,6 +99,7 @@ function(create_target_directory_groups target_name)
     endforeach()
 endfunction()
 
+add_subdirectory(externals)
 include_directories(src)
 
 add_executable(shadps4
@@ -106,3 +107,5 @@ add_executable(shadps4
 )
 
 create_target_directory_groups(shadps4)
+
+target_link_libraries(shadps4 PRIVATE elfio::elfio)

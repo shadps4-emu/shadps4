@@ -1,0 +1,6 @@
+[submodule "externals/ELFIO"]
+	path = externals/ELFIO
+	url = https://github.com/shadps4-emu/ext-ELFIO.git
+[submodule "externals/elfio"]
+	path = externals/elfio
+	url = https://github.com/shadps4-emu/ext-ELFIO.git
