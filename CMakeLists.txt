@@ -104,7 +104,7 @@ include_directories(src)
 
 add_executable(shadps4
     src/main.cpp
-)
+ "src/common/types.h")
 
 create_target_directory_groups(shadps4)
 
